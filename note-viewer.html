@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyGuide | Note Viewer</title>
+
+
+    <!-- Google Font -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+
+    <!-- Note Viewer CSS -->
+
+    <link
+        rel="stylesheet"
+        href="note-viewer.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         DESKTOP SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- PROFILE -->
+
+        <div class="profile">
+
+            <div
+                class="avatar"
+                id="userInitial"
+            >
+                S
+            </div>
+
+
+            <h3 id="sidebarName">
+                Student
+            </h3>
+
+
+            <p id="sidebarDepartment">
+                Computer Science
+            </p>
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav>
+
+
+            <a href="dashboard.html">
+
+                <i class="fas fa-house"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="courses.html"
+                class="active"
+            >
+
+                <i class="fas fa-book-open"></i>
+
+                <span>
+                    Courses
+                </span>
+
+            </a>
+
+
+
+            <a href="notes.html">
+
+                <i class="fas fa-file-lines"></i>
+
+                <span>
+                    Notes
+                </span>
+
+            </a>
+
+
+
+            <a href="#">
+
+                <i class="fas fa-file-circle-question"></i>
+
+                <span>
+                    Past Questions
+                </span>
+
+            </a>
+
+
+
+            <a href="#">
+
+                <i class="fas fa-user"></i>
+
+                <span>
+                    Profile
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+    </aside>
+
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================
+             READER HEADER
+        ================================== -->
+
+        <header class="reader-header">
+
+
+            <!-- BACK BUTTON -->
+
+            <button
+                class="back-btn"
+                id="backButton"
+            >
+
+                <i class="fas fa-arrow-left"></i>
+
+                <span>
+                    Back to Notes
+                </span>
+
+            </button>
+
+
+
+            <!-- DOCUMENT INFORMATION -->
+
+            <div class="document-info">
+
+
+                <div class="document-icon">
+
+                    <i class="fas fa-file-pdf"></i>
+
+                </div>
+
+
+
+                <div class="document-details">
+
+                    <h1 id="noteTitle">
+                        Week 1
+                    </h1>
+
+
+                    <p id="courseName">
+                        CSC121
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================
+             PDF VIEWER
+        ================================== -->
+
+        <section class="pdf-section">
+
+
+            <iframe
+                id="pdfViewer"
+                title="Lecture Note"
+                loading="lazy"
+            >
+            </iframe>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         MOBILE BOTTOM NAVIGATION
+    ====================================== -->
+
+    <nav class="mobile-bottom-nav">
+
+
+        <a href="dashboard.html">
+
+            <i class="fas fa-house"></i>
+
+            <span>
+                Home
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="courses.html"
+            class="active"
+        >
+
+            <i class="fas fa-book-open"></i>
+
+            <span>
+                Courses
+            </span>
+
+        </a>
+
+
+
+        <a href="notes.html">
+
+            <i class="fas fa-file-lines"></i>
+
+            <span>
+                Notes
+            </span>
+
+        </a>
+
+
+
+        <a href="#">
+
+            <i class="fas fa-user"></i>
+
+            <span>
+                Profile
+            </span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="note-viewer.js"></script>
+
+
+</body>
+
+</html>

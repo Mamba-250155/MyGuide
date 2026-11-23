@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyGuide | Course Details</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="course-details.css">
+</head>
+
+<body>
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="profile">
+
+            <div class="avatar" id="userInitial">
+                S
+            </div>
+
+            <h3 id="sidebarName">
+                Student
+            </h3>
+
+            <p id="sidebarDepartment">
+                Computer Science
+            </p>
+
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+                <i class="fas fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="courses.html" class="active">
+                <i class="fas fa-book-open"></i>
+                Courses
+            </a>
+
+            <a href="#">
+                <i class="fas fa-file-lines"></i>
+                Notes
+            </a>
+
+            <a href="#">
+                <i class="fas fa-file-circle-question"></i>
+                Past Questions
+            </a>
+
+            <a href="#">
+                <i class="fas fa-user"></i>
+                Profile
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- ================= Main Content ================= -->
+
+    <main class="main-content">
+
+        <!-- Back Button -->
+
+        <header class="page-header">
+
+            <a href="courses.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Back to Courses
+            </a>
+
+        </header>
+
+        <!-- Course Hero -->
+
+        <section class="course-hero">
+
+            <div class="course-icon" id="courseIcon">
+                📘
+            </div>
+
+            <div>
+
+                <h1 id="courseCode">
+                    CSC121
+                </h1>
+
+                <p id="courseTitle">
+                    Programming Fundamentals
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Course Information -->
+
+        <section class="info-card">
+
+            <h2>
+                Course Information
+            </h2>
+
+            <div class="info-grid">
+
+                <div class="info-item">
+                    <span>Department</span>
+                    <strong id="courseDepartment">
+                        Computer Science
+                    </strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Level</span>
+                    <strong id="courseLevel">
+                        100 Level
+                    </strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Semester</span>
+                    <strong id="courseSemester">
+                        2nd Semester
+                    </strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Units</span>
+                    <strong id="courseUnits">
+                        3 Units
+                    </strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    <!-- Notes -->
+
+<section class="resource-section">
+
+    <div class="resource-header">
+
+        <div>
+            <h2>
+                📚 Notes
+            </h2>
+
+            <p>
+                Lecture notes and study materials for this course.
+            </p>
+        </div>
+
+        <button
+            class="view-resource-btn"
+            id="notesButton">
+            View Notes →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- Past Questions -->
+
+<section class="resource-section">
+
+    <div class="resource-header">
+
+        <div>
+            <h2>
+                📝 Past Questions
+            </h2>
+
+            <p>
+                Practice with previous examination questions.
+            </p>
+        </div>
+
+        <button
+            class="view-resource-btn"
+            id="pastQuestionsButton">
+            View Past Questions →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- Assignments -->
+
+<section class="resource-section">
+
+    <div class="resource-header">
+
+        <div>
+            <h2>
+                📂 Assignments
+            </h2>
+
+            <p>
+                Course assignments and academic tasks.
+            </p>
+        </div>
+
+        <button
+            class="view-resource-btn"
+            id="assignmentsButton">
+            View Assignments →
+        </button>
+
+    </div>
+
+</section>
+
+    </main>
+    <script src="coursesDatabase.js"></script>
+    <script src="course-details.js"></script>
+
+
+</body>
+</html>

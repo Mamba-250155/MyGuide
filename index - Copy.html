@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> MyGuide Login</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="card">
+
+            <div class="logo-section"> 
+                <img src="logo.png" alt="MyGuide logo" class="logo"/>
+            </div>
+            
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" placeholder="e.g. Clinton Aibangbee"/>
+
+            <br><br>
+
+            <label for="username"> Username </label>
+            <input type="text" id="username" placeholder="e.g. clinton_dev"/>
+
+            <br><br>
+
+            <label for="faculty"> Faculty</label>
+            <input type="text" id="faculty" placeholder="e.g. Computing"/>
+
+            <br><br>
+             
+            <label for="department">Department</label>
+            <input type="text" id="department" placeholder="e.g. Computer Science"/>
+
+            <br><br>
+
+            <label for="level">level</label>
+            <select id="level">
+                <option value="">Select level</option>
+                <option value="100"> 100 level</option>
+                <option value="200"> 200 level</option>
+                <option value="300"> 300 level</option>
+                <option value="400"> 400 level</option>
+                <option value="500">500 level</option>
+            </select>
+
+            <br><br>
+
+            <!--Submit Button-->
+
+            <button onclick="enterMyGuide()">Enter MyGuide</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

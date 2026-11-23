@@ -1,0 +1,350 @@
+:root{
+    --primary:#1E3A8A;
+    --primary-light:#3B82F6;
+    --background:#F5F7FB;
+    --card:#FFFFFF;
+    --text:#1F2937;
+    --text-light:#6B7280;
+    --border:#E5E7EB;
+    --shadow:0 10px 30px rgba(0,0,0,0.08);
+    --radius:18px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:var(--background);
+    color:var(--text);
+    display:flex;
+    min-height:100vh;
+}
+
+/* =======================
+   Sidebar
+======================= */
+
+.sidebar{
+    width:260px;
+    background:var(--primary);
+    color:#fff;
+    padding:30px 20px;
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+}
+
+.profile{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.avatar{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    background:#fff;
+    color:var(--primary);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    font-weight:700;
+    margin:auto;
+    margin-bottom:15px;
+}
+
+.profile h3{
+    margin-bottom:6px;
+}
+
+.profile p{
+    color:#dbeafe;
+    font-size:14px;
+}
+
+nav{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    padding:14px 18px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+    background:rgba(255,255,255,.15);
+}
+
+nav i{
+    margin-right:10px;
+}
+
+/* =======================
+   Main Content
+======================= */
+
+.main-content{
+    flex:1;
+    margin-left:260px;
+    padding:40px;
+}
+
+/* =======================
+   Header
+======================= */
+
+.page-header{
+    margin-bottom:30px;
+}
+
+.back-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:var(--primary);
+    font-weight:600;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    transform:translateX(-4px);
+}
+
+/* =======================
+   Hero
+======================= */
+
+.course-hero{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:30px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    margin-bottom:30px;
+}
+
+.course-icon{
+    width:80px;
+    height:80px;
+    border-radius:18px;
+    background:#EEF4FF;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+}
+
+.course-hero h1{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.course-hero p{
+    color:var(--text-light);
+}
+
+/* =======================
+   Information Card
+======================= */
+
+.info-card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:30px;
+    margin-bottom:30px;
+}
+
+.info-card h2{
+    margin-bottom:25px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.info-item{
+    background:#F9FAFB;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:18px;
+}
+
+.info-item span{
+    display:block;
+    color:var(--text-light);
+    margin-bottom:8px;
+    font-size:14px;
+}
+
+.info-item strong{
+    font-size:17px;
+}
+
+/* =======================
+   Resource Sections
+======================= */
+
+.resource-section{
+    margin-bottom:35px;
+}
+
+.resource-section h2{
+    margin-bottom:20px;
+}
+
+.resource-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.resource-card{
+    background:var(--card);
+    border-radius:16px;
+    padding:20px;
+    box-shadow:var(--shadow);
+    border:1px solid transparent;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.resource-card:hover{
+    transform:translateY(-5px);
+    border-color:var(--primary-light);
+}
+
+.resource-card::before{
+    content:"📄";
+    font-size:22px;
+    display:block;
+    margin-bottom:12px;
+}
+
+/* =======================
+   Responsive
+======================= */
+
+@media(max-width:900px){
+
+.sidebar{
+    position:relative;
+    width:100%;
+    height:auto;
+}
+
+.main-content{
+    margin-left:0;
+    padding:25px;
+}
+
+body{
+    flex-direction:column;
+}
+
+.course-hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+}
+/* =========================================
+   RESOURCE HEADER
+   ========================================= */
+
+.resource-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+/* =========================================
+   RESOURCE DESCRIPTION
+   ========================================= */
+
+.resource-header p {
+    margin-top: 6px;
+    color: #9ca3af;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   VIEW RESOURCE BUTTON
+   ========================================= */
+
+.view-resource-btn {
+    border: none;
+    background: #2563eb;
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* Hover effect */
+
+.view-resource-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* Click effect */
+
+.view-resource-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .resource-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .view-resource-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+}

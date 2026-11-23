@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyGuide Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body class="dark">
+
+    <div class="dashboard-layout">
+        <!--SIDEBAR-->
+         <aside class="sidebar" id="sidebar">
+            <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+            <!-- User Card -->
+            <div class="user-card"
+            style="margin-top: 20px;">
+                <div class="user-top">
+                    <div class="avatar" id="avatar">C</div>
+
+                    <div class="user-info">
+                        <h4 class="username"> User </h4>
+                        <p class="user-level"> 100 level</p>
+                    </div>
+
+                    <button class="dropdown-btn">⌄</button>
+                </div>
+
+                <div class="streak">
+                    <span>🔥 3 Day Streak</span>
+                    <span>70%</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+            <div class="menu-section">
+                <h5>MAIN</h5>
+
+                <ul class="sidebar-links">
+
+                    <li class="active">
+                        <span>🏠</span>
+                        Dashboard
+                        <span class="arrow">›</span>
+                    </li>
+
+                    <li>
+                        <span>📚</span>
+                        <a  class="fas" href="courses.html">
+                            <i class="fas fa-book-open"></i>
+                            Courses
+                        </a>
+                        <span class="arrow">›</span>
+                    </li>
+
+                    <li>
+                        <span>📄</span>
+                        Past Questions
+                        <span class="arrow">›</span>
+                    </li>
+
+                    <li>
+                        <span>📝</span>
+                        Notes
+                        <span class="arrow">›</span>
+                    </li>
+
+                    <li>
+                        <span>🧠</span>
+                        AI Assistant
+                        <span class="arrow">›</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Tools -->
+            <div class="menu-section">
+                <h5>TOOLS</h5>
+
+                <ul class="sidebar-links">
+
+                    <li>
+                        <span>⚙️</span>
+                        Settings
+                        <span class="arrow">›</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Premium Card -->
+            <div class="premium-card">
+                <h4>👑 Go Premium</h4>
+                <p>Unlock all features</p>
+            </div>
+
+            <!-- Logout Button -->
+            <button class="logout-btn" id="logout-btn" type="button">
+                <span>🚪</span>
+                <span class="logout-text">Logout</span>
+            </button>
+
+            <!-- Collapse Button -->
+            <button class="collapse-btn">
+                ⟪ Collapse
+            </button>
+
+          </aside>
+        <!--MAIN CONTENT-->
+        <main class="dashboard">
+            <!--NAVBAR-->
+            <nav class="navbar">
+
+               <div class="nav-left">
+                    <button
+                        class="mobile-menu-btn"
+                        id="mobile-menu-btn"
+                        aria-label="Open navigation menu"
+                        aria-controls="sidebar"
+                        aria-expanded="false"
+                        type="button"
+                    >
+                        ☰
+                    </button>
+
+                    <div class="logo">
+                        <img src="logo.png" alt="MyGuide logo">
+                    </div>
+                </div>  
+
+                <div class="nav-right">
+                   <input type="text" placeholder="Search resources...">
+                
+                  <button class="theme-toggle">
+                    🌙
+                  </button>
+                     <div class="profile" id="profile-initial">
+                    C</div>
+
+                 </div>
+
+            </nav>
+
+            <!--Hero-->
+            <section class="dashboard-hero">
+                 <div class="hero-text">
+
+                    <p class="dashboard-tag">
+                        STUDY SMARTER 🚀
+                    </p>
+
+                    <h1 id="welcome-message">
+                        <span id="greeting-text"> Good Evening</span>, 
+                        <span class="hero-name"> 
+                            Student
+                        </span> 👋
+                    </h1>
+
+                    <p class="hero-description">
+                        Ready to continue your academic journey today?
+                    </p>
+
+                 </div>
+                 <div class="hero-glow"></div>
+                <div class="hero-info">
+                    <div class="info-card">
+                        <span class="info-icon">📘</span>
+                        <div> 
+                            <h4 class="department-name"> Computer Science </h4>
+                            <p>Department</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-icon">🎓 </span>
+                        <div>
+                            <h4 class="user-level">100 Level</h4>
+                            <p>Level</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!--QUICK ACTIONS-->
+
+            <section class="quick-access">
+
+                 <h2>Quick Access</h2>
+
+                    <div class="quick-grid">
+
+                        <a href="courses.html"       class="quick-card">
+
+                            <div class="icon">
+                                📚
+                            </div>
+
+                            <h3>Courses</h3>
+
+                            <p>Continue learning</p>
+
+                        </a>
+
+                        <div class="quick-card">
+                            <div class="icon">📄</div>
+
+                            <h3>Past Questions</h3>
+
+                            <p>Practice & improve</p>
+                        </div>
+
+                        <div class="quick-card">
+                            <div class="icon">📝</div>
+
+                            <h3>Notes</h3>
+
+                            <p>Your study notes</p>
+                        </div>
+
+                        <div class="quick-card">
+                            <div class="icon">🤖</div>
+
+                            <h3>AI Assistant</h3>
+
+                            <p>Get help instantly</p>
+                        </div>
+
+                    </div>
+
+            </section>
+
+
+            <!--Resources-->
+
+        <section class="resources">
+              <div class="section-header">
+                    <h2>Your Courses</h2>
+                    <p>
+                        Access all your academic resources
+                        in one place.
+                    </p>
+
+                </div>
+
+                <div class="resource-grid">
+
+                    <div class="resource-card">
+
+                        <h3>CSC 111</h3>
+
+                        <p>
+                            Introduction to Computer Science
+                        </p>
+
+                        <span>12 Materials</span>
+
+                 </div>
+
+              <div class="resource-card">
+
+                    <h3>PHY 111</h3>
+
+                    <p>
+                        Electricity and Magnetism
+                    </p>
+
+                    <span>8 Materials</span>
+
+                 </div>
+
+            <div class="resource-card">
+
+                <h3>MTH 111</h3>
+
+                <p>
+                    Elementary Mathematics
+                </p>
+
+                <span>15 Materials</span>
+
+            </div>
+
+            <div class="resource-card">
+
+                <h3>GST 111</h3>
+
+                <p>
+                    Communication in English
+                </p>
+
+                <span>10 Materials</span>
+
+            </div>
+
+         </div>
+
+        </section>
+         <!--Recent Resources-->
+          <section class="recent-section">
+                <div class="section-header">
+                    <h2>Recent Resources</h2>
+                    <p>
+                        Continue where you stopped studying.
+                    </p>
+                </div>
+                <div class="recent-list">
+
+                    <div class="recent-item">
+
+                        <div class="recent-left">
+
+                            <span class="recent-icon">📄</span>
+
+                            <div>
+                                <h4>CSC 121 Notes.pdf</h4>
+                                <p>Computer Science • Notes</p>
+                            </div>
+
+                        </div>
+
+                        <span class="recent-time">
+                            2 hours ago
+                        </span>
+
+                    </div>
+
+                    <div class="recent-item">
+
+                        <div class="recent-left">
+
+                            <span class="recent-icon">📘</span>
+
+                            <div>
+                                <h4>PHY 121 Past Questions.pdf</h4>
+                                <p>Physics • Past Questions</p>
+                            </div>
+
+                        </div>
+
+                        <span class="recent-time">
+                            Yesterday
+                        </span>
+
+                    </div>
+
+                    <div class="recent-item">
+
+                        <div class="recent-left">
+
+                            <span class="recent-icon">📝</span>
+
+                            <div>
+                                <h4>GST Assignment.docx</h4>
+                                <p>GST • Assignment</p>
+                            </div>
+
+                        </div>
+
+                        <span class="recent-time">
+                            3 days ago
+                        </span>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+            
+
+        </main>
+     </div>
+
+    </div>
+   
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyGuide | Login</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <!-- Logo -->
+            <div class="logo-section">
+                <img src="logo.png" alt="MyGuide Logo" class="logo">
+                <p>Your academic journey, simplified.</p>
+            </div>
+
+
+            <!-- Login Form -->
+            <div class="form-section">
+
+                <!-- Full Name -->
+                <label for="fullname">Full Name</label>
+
+                <input
+                    type="text"
+                    id="fullname"
+                    placeholder="Enter your full name"
+                >
+
+
+                <!-- Username -->
+                <label for="username">Username</label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Choose a username"
+                >
+
+
+                <!-- Faculty -->
+                <label for="faculty">Faculty</label>
+
+                <select id="faculty" onchange="updateDepartments()">
+
+                    <option value="">Select your faculty</option>
+
+                    <option value="Computing">
+                        Faculty of Computing
+                    </option>
+
+                    <option value="Medical Sciences">
+                        Faculty of Medical Sciences 
+                    </option>                    
+
+                    <option value="Engineering">
+                        Faculty of Engineering
+                    </option>
+
+                    <option value="Social Sciences">
+                        Faculty of Social Sciences
+                    </option>
+
+                    <option value="Management Sciences">
+                        Faculty of Management Sciences
+                    </option>
+
+                    <option value="Arts">
+                        Faculty of Arts
+                    </option>
+
+                    <option value="Education">
+                        Faculty of Education
+                    </option>
+
+                </select>
+
+
+                <!-- Department -->
+                <label for="department">Department</label>
+
+                <select id="department">
+
+                    <option value="">
+                        Select your department
+                    </option>
+
+                </select>
+
+
+                <!-- Level -->
+                <label for="level">Level</label>
+
+                <select id="level">
+
+                    <option value="">
+                        Select your level
+                    </option>
+
+                    <option value="100">100 Level</option>
+                    <option value="200">200 Level</option>
+                    <option value="300">300 Level</option>
+                    <option value="400">400 Level</option>
+                    <option value="500">500 Level</option>
+
+                </select>
+
+
+                <!-- Button -->
+                <button onclick="enterMyGuide()">
+                    Enter MyGuide
+                </button>
+
+            </div>
+
+
+            <p class="footer-text">
+                Your academic resources. All in one place.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>
+

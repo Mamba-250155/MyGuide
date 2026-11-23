@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #1e3a8a;
+    --primary-light: #3b82f6;
+    --background: #f5f7fb;
+    --white: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* ===============================
+   SIDEBAR
+================================ */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background: var(--white);
+    border-right: 1px solid var(--border);
+
+    padding: 30px 18px;
+
+    z-index: 1000;
+}
+
+.profile {
+    text-align: center;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.avatar {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary);
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.profile h3 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.profile p {
+    margin-top: 4px;
+
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.sidebar nav {
+    margin-top: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.sidebar nav a i {
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar nav a:hover {
+    background: #f1f5f9;
+    color: var(--primary);
+}
+
+.sidebar nav a.active {
+    background: #eff6ff;
+    color: var(--primary);
+}
+
+
+/* ===============================
+   MAIN
+================================ */
+
+.main-content {
+    margin-left: 250px;
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ===============================
+   HEADER
+================================ */
+
+.reader-header {
+    height: 80px;
+    min-height: 80px;
+
+    background: var(--white);
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 25px;
+
+    gap: 25px;
+
+    z-index: 10;
+}
+
+
+/* BACK BUTTON */
+
+.back-btn {
+    border: none;
+
+    background: transparent;
+
+    color: var(--primary);
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 10px;
+
+    border-radius: 8px;
+}
+
+.back-btn:hover {
+    background: #eff6ff;
+}
+
+
+/* DOCUMENT */
+
+.document-info {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+}
+
+.document-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    border-radius: 9px;
+
+    font-size: 18px;
+}
+
+.document-details {
+    min-width: 0;
+}
+
+.document-details h1 {
+    font-size: 16px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.document-details p {
+    margin-top: 2px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* ===============================
+   PDF AREA
+================================ */
+
+.pdf-section {
+    flex: 1;
+
+    min-height: 0;
+
+    padding: 18px;
+
+    background: #e5e7eb;
+
+    display: flex;
+}
+
+#pdfViewer {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+
+    background: white;
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ===============================
+   MOBILE NAV
+================================ */
+
+.mobile-bottom-nav {
+    display: none;
+}
+
+
+/* ===============================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+    }
+
+}
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+    body {
+        overflow: hidden;
+
+        padding-bottom: 65px;
+    }
+
+
+    /* Hide desktop sidebar */
+
+    .sidebar {
+        display: none;
+    }
+
+
+    /* Main */
+
+    .main-content {
+        margin-left: 0;
+
+        height: calc(100vh - 65px);
+    }
+
+
+    /* Header */
+
+    .reader-header {
+        height: 65px;
+        min-height: 65px;
+
+        padding: 0 12px;
+
+        gap: 8px;
+    }
+
+
+    .back-btn {
+        padding: 8px;
+
+        flex-shrink: 0;
+    }
+
+    .back-btn span {
+        display: none;
+    }
+
+
+    .document-info {
+        flex: 1;
+
+        min-width: 0;
+    }
+
+
+    .document-icon {
+        width: 36px;
+        height: 36px;
+
+        font-size: 15px;
+    }
+
+
+    .document-details h1 {
+        font-size: 14px;
+    }
+
+    .document-details p {
+        font-size: 11px;
+    }
+
+
+    /* PDF */
+
+    .pdf-section {
+        padding: 0;
+
+        min-height: 0;
+    }
+
+
+    #pdfViewer {
+        border-radius: 0;
+
+        box-shadow: none;
+    }
+
+
+    /* Bottom navigation */
+
+    .mobile-bottom-nav {
+        position: fixed;
+
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: 65px;
+
+        background: white;
+
+        border-top: 1px solid var(--border);
+
+        display: flex;
+
+        z-index: 2000;
+    }
+
+
+    .mobile-bottom-nav a {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 4px;
+
+        text-decoration: none;
+
+        color: var(--muted);
+
+        font-size: 10px;
+    }
+
+
+    .mobile-bottom-nav a i {
+        font-size: 17px;
+    }
+
+
+    .mobile-bottom-nav a.active {
+        color: var(--primary);
+    }
+
+}
+
+
+/* ===============================
+   VERY SMALL PHONES
+================================ */
+
+@media (max-width: 380px) {
+
+    .reader-header {
+        padding: 0 8px;
+    }
+
+    .document-details h1 {
+        font-size: 13px;
+    }
+
+    .document-details p {
+        font-size: 10px;
+    }
+
+    .mobile-bottom-nav a {
+        font-size: 9px;
+    }
+}

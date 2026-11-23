@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>MyGuide | Notes</title>
+
+    <link rel="stylesheet" href="notes.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="notes-container">
+
+
+        <!-- HEADER -->
+
+        <header class="notes-header">
+
+            <button id="backButton">
+                ←
+            </button>
+
+            <div>
+
+                <h1 id="courseCode">
+                    Course
+                </h1>
+
+                <p id="courseTitle">
+                    Notes
+                </p>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- SEARCH -->
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchNotes"
+                placeholder="Search notes..."
+            >
+
+        </div>
+
+
+
+        <!-- NOTES -->
+
+        <main>
+
+            <div class="section-heading">
+
+                <h2>Lecture Notes</h2>
+
+                <span id="notesCount">
+                    0 notes
+                </span>
+
+            </div>
+
+
+            <div id="notesContainer">
+
+                <!-- Notes will appear here -->
+
+            </div>
+
+        </main>
+
+
+    </div>
+
+
+
+    <script src="coursesDatabase.js"></script>
+
+    <script src="notesDatabase.js"></script>
+
+    <script src="notes.js"></script>
+
+
+</body>
+
+</html>
